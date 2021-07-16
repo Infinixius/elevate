@@ -1,0 +1,424 @@
+[
+	{
+		"name": "Villager",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862280373894250517/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Nothing special"
+		]
+	},
+	{
+		"name": "Cop",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862280573098524692/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Can visit someone each night to investigate them",
+			"Investigations tell the cop the target's alignment (village, mafia, or third party)"
+		]
+	},
+	{
+		"name": "Doctor",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862280661096202251/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Can visit someone each night to protect them",
+			"Protection saves the target from death that night",
+			"Protection saves the target from infection that night",
+			"Cannot choose self",
+			"Dying does not stop protection, but roleblocking does"
+		]
+	},
+	{
+		"name": "Bodyguard",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862281010426150942/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Can visit someone each night to guard them",
+			"If target is killed, 50/50 chance for the bodyguard or attacker to die",
+			"Cannot choose self"
+		]
+	},
+	{
+		"name": "Lookout",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862300759509172224/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Can stalk someone each night",
+			"Stalking does not count as a visit",
+			"Receives a report of who visited them",
+			"Report will also tell if the target visited someone, but not who",
+			"Can choose self"
+		]
+	},
+	{
+		"name": "Vigiliante",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862282037402796052/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Can choose someone each night to shoot",
+			"If target is innocent, commit suicide"
+		]
+	},
+	{
+		"name": "Sheriff",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862283294716723200/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Starts off with a gun",
+			"Gun will reveal the Sheriff's identity"
+		]
+	},
+	{
+		"name": "Gunsmith",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862284416700121108/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Can give someone a gun each night",
+			"An announcement is made every time a gun is obtained",
+			"Cannot choose self"
+		]
+	},
+	{
+		"name": "Blacksmith",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862284890959642624/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Can give someone a vest each night",
+			"Can choose self"
+		]
+	},
+	{
+		"name": "Mafia",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862285213090840576/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Can kill someone each night along with other mafia",
+			"Attends mafia meetings"
+		]
+	},
+	{
+		"name": "Stalker",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862301740044517396/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Can stalk someone each night",
+			"Stalking does not count as a visit",
+			"Receives a report of who visited them",
+			"Report will also tell if the target visited someone, but not who",
+			"Can choose self"
+		]
+	},
+	{
+		"name": "Hooker",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862285587913900032/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Can roleblock someone each night",
+			"Roleblocking prevents all night actions, such as investigations or doctor protections"
+		]
+	},
+	{
+		"name": "Lawyer",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/863063073848819733/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Can make a fellow mafia appear innocent on cop reports each night",
+			"Detectives will see villager",
+			"Cannot choose self"
+		]
+	},
+	{
+		"name": "Janitor",
+		"pack": "Classic",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862286564914102272/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Can clean up a murder once per game",
+			"If cleaned up, only the Janitor will know the role and alignment of the mafia kill target"
+		]
+	},
+	{
+		"name": "Bomb",
+		"pack": "JFK",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862287190545793044/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"If killed, explodes",
+			"Explosion will kill the attacker and self",
+			"If protected, attacker still explodes",
+			"Identical to Villager"
+		]
+	},
+	{
+		"name": "President",
+		"pack": "JFK",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862287637193031690/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"President's identity is visible to all villagers",
+			"President can broadcast a single message at the beginning of the game",
+			"If killed, mafia win instantly"
+		]
+	},
+	{
+		"name": "Sniper",
+		"pack": "JFK",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862289184949010462/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Starts off with a gun",
+			"Gun will not reveal the Sniper's identity",
+			"Attends mafia meetings"
+		]
+	},
+	{
+		"name": "Bulletproof",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862305138311561246/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Starts off with a vest",
+			"thats it lmao yep nothing else just a vest",
+			"literally nothing different its just that bro get pranked",
+			"Identical to villager"
+		]
+	},
+	{
+		"name": "Jailer",
+		"pack": "13th",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862290170220380160/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"If no lynching, Jailer can jail someone each day, and target will be jailed the next night",
+			"Jail target cannot perform night actions and is immune to night actions",
+			"Jailer's identity is unknown to the target",
+			"Jailer and target can communicate",
+			"Jailer can release or execute the target",
+			"Cannot choose self"
+		]
+	},
+	{
+		"name": "Killer",
+		"pack": "13th",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862293310227480596/emoji.png",
+		"alignment": 2,
+		"desc": [
+			"Must kill someone each night",
+			"Kills are higher priority than mafia kills",
+			"Wins if last one standing"
+		]
+	},
+	{
+		"name": "Fool",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862293929838510100/emoji.png",
+		"alignment": 2,
+		"desc": [
+			"Must visit someone each night",
+			"Wins if lynched"
+		]
+	},
+	{
+		"name": "Yakuza",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862294444422594601/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Once per game, can convert the mafia kill target into mafia",
+			"Conversion does not kill the mafia target",
+			"Commits suicide upon conversion",
+			"Icon contributed by DemonPumpkin"
+		]
+	},
+	{
+		"name": "Surgeon",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862295060170014730/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Once per game, can visit and revive a dead person"
+		]
+	},
+	{
+		"name": "Amnesiac",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862295663437021204/emoji.png",
+		"alignment": 2,
+		"desc": [
+			"Once per game, can visit and steal a dead person's role",
+			"If target is revived, they will be revived into an amnesiac",
+			"Cannot win as amnesiac"
+		]
+	},
+	{
+		"name": "Cultist",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862296168489811969/emoji.png",
+		"alignment": 2,
+		"desc": [
+			"Can convert someone into cultist each night",
+			"If visited by a Mason, cultist dies",
+			"If the original Cultist dies, all Cultists die",
+			"Attends Cultist meetings",
+			"Wins if cultists outnumber everyone during day"
+		]
+	},
+	{
+		"name": "Mason",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862296457640673280/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Can recruit and convert someone into Mason each night",
+			"If recruiting a mafia-sided role, or Killer, all masons die",
+			"If recruiting a Cultist, cultist dies",
+			"Attends Mason meetings"
+		]
+	},
+	{
+		"name": "Drunk",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862298071378165790/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Can roleblock someone each night",
+			"Roleblocking prevents all night actions, such as investigations or doctor protections"
+		]
+	},
+	{
+		"name": "Granny",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862298100378370099/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Will shoot anyone who visits her",
+			"Cannot die during the night",
+			"Can be converted, but will shoot the converter",
+			"Visits self if visited",
+			"Visitors will visit themselves"
+		]
+	},
+	{
+		"name": "Godfather",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862300094124654602/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Appears innocent on cop reports",
+			"If visited, mafia will not kill"
+		]
+	},
+	{
+		"name": "Celebrity",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862302339368091648/emoji.png",
+		"alignment": 0,
+		"desc": [
+			"Role is visible to everyone at all times"
+		]
+	},
+	{
+		"name": "Kidnapper",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862302651093483540/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Can kidnap someone once per game",
+			"Kidnapped target will not be able to see or talk in day chat the next day"
+		]
+	},
+	{
+		"name": "Supplier",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862304152856297482/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Can give a mafia member a gun or vest each night",
+			"Gun will always reveal identity, and will not kill a mafia member",
+			"Cannot choose self"
+		]
+	},
+	{
+		"name": "Diplomat",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862306631370539028/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Visits someone once per night",
+			"If target is a visiting role, they will be forced to visit the Diplomat"
+		]
+	},
+	{
+		"name": "Illusionist",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/863002821489197066/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Visits someone once per night",
+			"Target will appear guilty on cop reports"
+		]
+	},
+	{
+		"name": "Tailor",
+		"pack": "Trial",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862306049385168916/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"At the start of the game, can make someone appear as another role",
+			"Any actions they perform will not work"
+		]
+	},
+	{
+		"name": "Zombie",
+		"pack": "Infection",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862310065430855731/emoji.png",
+		"alignment": 2,
+		"desc": [
+			"Converts one person to Zombie each night",
+			"If host Zombie is killed, village instantly win",
+			"Attends Zombie meetings",
+			"Must outnumber villagers to win",
+			"Cannot win if corporal is alive",
+			"Contributed by DemonPumpkin"
+		]
+	},
+	{
+		"name": "Corporal",
+		"pack": "Infection",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862310160646275083/emoji.png",
+		"alignment": 1,
+		"desc": [
+			"Immune to Zombie infection",
+			"Contributed by DemonPumpkin"
+		]
+	},
+	{
+		"name": "infinixius",
+		"pack": "deez",
+		"image": "https://media.discordapp.net/attachments/826217172782284860/862998550073049088/INFINIXIUS-1.jpg",
+		"alignment": 2,
+		"desc": [
+			"Immune to death (except suicide)",
+			"Starts off with a gun and vest",
+			"Cannot be lynched",
+			"Immune to infection and conversion",
+			"Can kill, roleblock, investigate, and protect someone each night",
+			"Can see all night meetings",
+			"Will learn the names of everyone who visits them",
+			"No random critical hits"
+		]
+	}
+]

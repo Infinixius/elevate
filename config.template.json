@@ -1,0 +1,38 @@
+{
+	"token": "",
+	"prefix": ">",
+	
+	"modules": {
+		"bot": true,
+		"fun": true,
+		"images": true,
+		"internet": true,
+		"utility": true
+	},
+	
+	"allowAdministratorOverride": true,
+	"globalPermissions": {
+		"botowner": [""],
+		"serverowner": [],
+		"manager": [],
+		"admin": [],
+		"mod": []
+	},
+	
+	"logger": {
+		"enabled": true,
+		"format": "[%time][%TYPE] - %log",
+		"fileFormat": "./logs/%date-%time.log",
+		
+		"info": true,
+		"errors": true,
+		"debug": true,
+		"discord": true
+	},
+	
+	"status": {
+		"prefix": "",
+		"suffix": " | >help",
+		"list": []
+	}
+}
