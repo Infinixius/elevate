@@ -1,0 +1,14 @@
+{
+	"name": "Elevate",
+	"version": "1.0.0",
+	"git": "https://github.com/Infinixius/elevate.git",
+	
+	"changelog": {
+		"1.0.0": {
+			"description": [
+				"Initial release"
+			],
+			"raw": "https://github.com/infinixus/elevate/archive/refs/tags/v1.0.0.zip"
+		}
+	}
+}

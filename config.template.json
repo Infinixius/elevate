@@ -12,11 +12,7 @@
 	
 	"allowAdministratorOverride": true,
 	"globalPermissions": {
-		"botowner": [""],
-		"serverowner": [],
-		"manager": [],
-		"admin": [],
-		"mod": []
+		"botowner": [""]
 	},
 	
 	"logger": {
