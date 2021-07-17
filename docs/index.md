@@ -24,7 +24,7 @@ An explanation of config.json can be found in `/docs/Config.md` or [here](https:
 
 Once configured, you can now run `node index` for the bot to start. A list of commands can be found by running `cmds`.
 
-- **Commands** - https://infinixius.github.io/elevate/Commands
-- **License** - https://github.com/Infinixius/elevate/blob/main/LICENSE
-- **Contact** - https://infinixius.github.io
-- **Credits** - https://infinixius.github.io/elevate/Credits
+- **Commands** - [https://infinixius.github.io/elevate/Commands](https://infinixius.github.io/elevate/Commands)
+- **License** - [https://github.com/Infinixius/elevate/blob/main/LICENSE](https://github.com/Infinixius/elevate/blob/main/LICENSE)
+- **Contact** - [https://infinixius.github.io](https://infinixius.github.io)
+- **Credits** - [https://infinixius.github.io/elevate/Credits](https://infinixius.github.io/elevate/Credits)
