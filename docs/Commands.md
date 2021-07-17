@@ -1,4 +1,5 @@
 ---
+title: Commands
 ---
 
 # Commands
