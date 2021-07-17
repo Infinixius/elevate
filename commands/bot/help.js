@@ -36,7 +36,7 @@ module.exports = {
 		      "fields": [
 		        {
 		          "name": "Commands",
-		          "value": "https://infinixius.github.io/elevate#Commands\n\nAlternatively, you can run `help` with a command to see more information about that command, or `cmds` to get a list of all commands."
+		          "value": "https://infinixius.github.io/elevate/Commands\n\nAlternatively, you can run `help` with a command to see more information about that command, or `cmds` to get a list of all commands."
 		        },
 		        {
 		          "name": "Statistics",
@@ -44,7 +44,7 @@ module.exports = {
 		        },
 		        {
 		          "name": "Links",
-		          "value": "[Commands](https://infinixius.github.io/elevate#Commands) - [Credits](https://infinixius.github.io/elevate#credits) - [GitHub](https://github.com/infinixius/elevate)",
+		          "value": "[Commands](https://infinixius.github.io/elevate/Commands) - [Credits](https://infinixius.github.io/elevate/Credits) - [GitHub](https://github.com/infinixius/elevate)",
 		          "inline": true
 		        }
 		      ],

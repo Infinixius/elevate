@@ -1,4 +1,6 @@
-# elevate
+---
+title: Elevate
+---
 
 Modular discord bot written in discord.js
 
