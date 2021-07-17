@@ -1,3 +1,6 @@
+---
+---
+
 # Config
 
 Elevate uses `config.json` to configure parts of the bot. In a freshly cloned repository, you'll need to rename `config.template.json` to `config.json`
