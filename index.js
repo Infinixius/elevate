@@ -10,6 +10,7 @@ const client = new Discord.Client({
 })
 const config = require("./config.json")
 const fs = require("fs")
+const splash = require("./assets/splash.json")
 var stats = require("./stats.json")
 global.stats = stats
 
@@ -37,12 +38,12 @@ client.on("ready", () => {events.ready(client)})
 client.on("message", (msg) => {events.message(msg)})
 
 // initialize
-stats.stats.timesLaunched++
-console.log(stats.splash)
+stats.timesLaunched++
+console.log(splash.splash)
 client.login(config.token)
 
 setInterval(function(){
-	stats.stats.timeElapsed = stats.stats.timeElapsed + 5
+	stats.timeElapsed = stats.timeElapsed + 5
 	fs.writeFile("./stats.json", JSON.stringify(stats), function(err) {
 		if (err) throw err
 	})

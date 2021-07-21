@@ -18,7 +18,7 @@ module.exports.ready = function(client) {
 	}, 120000)
 }
 module.exports.message = async function(message) {
-	global.stats.stats.messages++
+	global.stats.messages++
 	if (!message.author.id == 485443784180760578) return message.reply("you are not infix")
 	let context = {}
 	if (message.partial) {logger.log("Partial message: "+message, "debug")} // log partial messages
@@ -56,7 +56,7 @@ module.exports.message = async function(message) {
 	}
 
 	try {
-		global.stats.stats.commands++
+		global.stats.commands++
 		command.execute(message, args, context)
 	} catch (err) {
 		logger.log(`Command error while handling "${message.content}": ${err}`, "error")

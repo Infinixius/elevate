@@ -1,4 +1,5 @@
 const response = require("../../modules/Response.js")
+const splash = require("../../assets/splash.json")
 
 module.exports = {
 	name: "help",
@@ -40,7 +41,7 @@ module.exports = {
 		        },
 		        {
 		          "name": "Statistics",
-		          "value": `So far, ${stats.messages} messages have been sent, ${stats.commands} commands have been processed, and the bot has been up for a total of ${Math.round(stats.timeElapsed/60)} minutes.`
+		          "value": `So far, ${global.stats.messages} messages have been sent, ${global.stats.commands} commands have been processed, and the bot has been up for a total of ${Math.round(global.stats.timeElapsed/60)} minutes.`
 		        },
 		        {
 		          "name": "Links",
@@ -49,7 +50,7 @@ module.exports = {
 		        }
 		      ],
 		      "footer": {
-		        "text": `Requested by ${message.author.username} | Built with <3 by infinixius`,
+		        "text": `Requested by ${message.author.username} | Running v${splash.version}`,
 				"icon_url": message.author.avatarURL({ format: "png", size: 256 })
 		      }
 		    }
