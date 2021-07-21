@@ -19,7 +19,7 @@ module.exports = {
 			.replace(/[^0-9a-z ]/gi, "") // only keep alphanumerics
 			.trim()
 			.replace(" ", "_") // replace spaces with underscores to keep it URL-safe
-		console.log(search)
+		
 		await message.react("👀")
 		fetch("https://wiki.teamfortress.com/wiki/"+search)
 			.then(res => res.text())
@@ -34,7 +34,6 @@ module.exports = {
 				let info = []
 				let misc = []
 				embed.url = "https://wiki.teamfortress.com/wiki/"+search
-				console.log(embed.url)
 				embed.title = dom.window.document.getElementById("firstHeading").textContent
 				embed.description = dom.window.document.querySelector("p").textContent
 				let url = dom.window.document.querySelector("img").src
@@ -57,7 +56,7 @@ module.exports = {
 					}
 				}
 				if (stats.length > 0) {
-					embed.fields.push({ name: "Weapon stats", value: stats.join("\n") })
+					embed.fields.push({ name: "Stats", value: stats.join("\n") })
 				}
 				
 				// get info
@@ -101,23 +100,5 @@ module.exports = {
 				error: error
 			}))
 		})
-		
-		/*fetch(url)
-			.then(res => res.text())
-			.then(text => {
-				const dom = new JSDOM(text)
-				console.log(dom.window.document.querySelector('title').textContent)
-				let embed = {}
-				embed.title = dom.window.document.getElementById("firstHeading").innerText
-				embed.description = "text: "+dom.window.document.getElementById("mw-content-text").innerText
-				message.reply({embeds: [embed]})
-			})
-			.catch(error => {
-				message.reply(response(message, "error", "negative", message.author, { 
-					description: "Failed to make HTTP request!",
-					error: error
-				}))
-			})
-			*/
 	},
 };
