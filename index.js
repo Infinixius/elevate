@@ -11,12 +11,13 @@ const client = new Discord.Client({
 const config = require("./config.json")
 const fs = require("fs")
 const splash = require("./assets/splash.json")
-var stats = require("./stats.json")
+const stats = require("./stats.json")
 global.stats = stats
 
 // utility modules
 const events = require("./modules/Events.js")
 const logger = require("./modules/Logger.js")
+var update = require("./modules/Updates.js")()
 
 client.cooldowns = new Discord.Collection()
 
@@ -43,6 +44,11 @@ console.log(splash.splash)
 client.login(config.token)
 
 setInterval(function(){
+	if (update.outdated == true) {
+		logger.warning(`This version is outdated! You are on ${update.current} and the latest version is ${update.latest}.`)
+		logger.warning(`THIS WILL NOT AUTOUPDATE! You need to manually update. You can get the latest version at ${update.url}`)
+		update = {} // because update is async, it isn't immediately available so i was lazy and just polled for it
+	}
 	stats.timeElapsed = stats.timeElapsed + 5
 	fs.writeFile("./stats.json", JSON.stringify(stats), function(err) {
 		if (err) throw err
