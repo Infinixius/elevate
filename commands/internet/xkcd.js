@@ -1,10 +1,11 @@
 const fetch = require("node-fetch")
+const config = require("../../config.json")
 const response = require("../../modules/Response.js")
 const logger = require("../../modules/Logger.js")
 var latestComic
 
 // get latest comic number
-fetch("https://xkcd.com/info.0.json")
+fetch("https://xkcd.com/info.0.json", { headers: { "User-Agent": config.httpUserAgent } })
 	.then(res => res.json())
 	.then(json => {
 		latestComic = json.num
@@ -40,7 +41,7 @@ module.exports = {
 		}
 		
 		await message.react("👀")
-		fetch(url)
+		fetch(url, { headers: { "User-Agent": config.httpUserAgent } })
 			.then(res => res.json())
 			.then(json => {
 				message.reply(response(message, "urlimage", "positive", message.author, { 
@@ -49,6 +50,7 @@ module.exports = {
 					url: json.img
 				}))
 				.catch(error => {
+					logger.error("Fetch error: "+error)
 					message.reply(response(message, "error", "negative", message.author, { 
 						description: "Failed to make HTTP request!",
 						error: error
