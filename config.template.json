@@ -1,6 +1,7 @@
 {
 	"token": "",
 	"prefix": ">",
+	"checkForUpdates": true,
 	
 	"modules": {
 		"bot": true,
@@ -8,6 +9,15 @@
 		"images": true,
 		"internet": true,
 		"utility": true
+	},
+	
+	"allowNSFWAnywhere": false,
+	
+	"httpUserAgent": "Elevate/v1.1.0 by infinixius",
+	"rule34Instance": "r34-json-api.herokuapp.com",
+	
+	"auth": {
+		"github": "Username/PersonalAccessToken"
 	},
 	
 	"allowAdministratorOverride": true,
@@ -21,7 +31,8 @@
 		"fileFormat": "./logs/%date-%time.log",
 		
 		"info": true,
-		"errors": true,
+		"error": true,
+		"warning": true,
 		"debug": true,
 		"discord": true
 	},
