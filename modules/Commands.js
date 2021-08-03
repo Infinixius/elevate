@@ -1,13 +1,18 @@
 const Discord = require("discord.js")
 const config = require("../config.json")
+const response = require("./Response.js")
 
 module.exports.validate = function(message, command, args) {
 	if (command.args && !args.length) {
-		message.reply(`You didn't provide any arguments! Intended usage: \`${command.usage}\``)
+		message.reply(response(message, "reply", "negative", message.author, { title: `You didn't provide any arguments! Intended usage: \`${command.usage}\`` }))
 		return true
 	}
 	if (command.guildOnly && message.channel.type == "dm") {
-		message.reply("I can't execute that command inside DMs!")
+		message.reply(response(message, "reply", "negative", message.author, { title: "This command only works in servers, not DMs!" }))
+		return true
+	}
+	if (command.nsfw && !message.channel.nsfw && !config.allowNSFWAnywhere) {
+		message.reply(response(message, "reply", "negative", message.author, { title: "This command can only be ran in NSFW channels!" }))
 		return true
 	}
 	return false
