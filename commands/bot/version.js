@@ -7,8 +7,10 @@ module.exports = {
 		const update = require("../../modules/Updates.js")()
 		let embed = { color: "37D5FF", fields: [], title: "Version "+update.current }
 		
-		embed.fields.push({ name: "Patch notes for "+update.latest, value: update.body })
-		embed.fields.push({ name: "Changelog/Download", value: update.url })
+		if (update.checkenabled) {
+			embed.fields.push({ name: "Patch notes for "+update.latest, value: update.body })
+			embed.fields.push({ name: "Changelog/Download", value: update.url })
+		}
 		embed.footer = {
 			"text": `Requested by ${message.author.username}`,
 			"icon_url": message.author.avatarURL({ format: "png", size: 256 })

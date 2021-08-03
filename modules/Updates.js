@@ -8,6 +8,7 @@ function check() {
 	if (config.checkForUpdates == false) {
 		result.outdated = false
 		result.current = splash.version
+		result.checkenabled = false
 		return
 	}
 	fetch(splash.update, { headers: { "User-Agent": config.httpUserAgent, 
@@ -22,9 +23,13 @@ function check() {
 				result.current = "v"+splash.version
 				result.url = update.html_url
 				result.body = update.body
+				result.checkenabled = true
 			} else {
 				result.outdated = false
 				result.current = splash.version
+				result.url = update.html_url
+				result.body = update.body
+				result.checkenabled = true
 			}
 		})
 		.catch(error => {
