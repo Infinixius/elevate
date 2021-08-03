@@ -16,18 +16,17 @@ module.exports = {
 				message.reply(response(message, "reply", "negative", message.author, { title: "That isn't a command!" }))
 			}
 			
-			let msg = "**Name**: "+command.name+"\n"
+			var msg = "**Name**: "+command.name+"\n"
+			msg = msg + `**Description**: ${command.description}\n`
+			msg = msg + "**Category**: "+command.category+"\n"
 			if (command.aliases) msg = msg + "**Aliases**: "+command.aliases.join(', ')+"\n"
-			if (command.category) {msg = msg + "**Category**: "+command.category+"\n"}
-			if (command.description) msg = msg + "**Description**: "+command.description+"\n"
-			if (command.usage) msg = msg = "**Usage**: "+command.usage+"\n"
+			if (command.usage) msg = msg + "**Usage**: "+command.usage+"\n"
 			msg = msg + `**Cooldown**: ${command.cooldown || 3} second(s)\n`
 			if (command.nsfw) msg = msg + "This command only works in NSFW channels"
 			
-			message.reply(response(message, "reply", "positive", message.author, { title: "Command info for "+command.name, description: msg }))
-			return
+			return message.reply(response(message, "reply", "positive", message.author, { title: "Command info for "+command.name, description: msg }))
 		}
-		let stats = global.stats.stats
+		
 		message.reply({
 		  "embeds": [
 		    {
