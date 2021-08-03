@@ -389,9 +389,11 @@
 		"desc": [
 			"Converts one person to Zombie each night",
 			"If host Zombie is killed, village instantly win",
+			"Host zombie is immune to corporal kills",
 			"Attends Zombie meetings",
 			"Must outnumber villagers to win",
 			"Cannot win if corporal is alive",
+			
 			"Contributed by DemonPumpkin"
 		]
 	},
@@ -402,7 +404,26 @@
 		"alignment": 1,
 		"desc": [
 			"Immune to Zombie infection",
+			"Cannot kill the host zombie",
 			"Contributed by DemonPumpkin"
+		]
+	},
+	{
+		"name": "RandomVillager",
+		"pack": "Classic",
+		"image": "https://cdn.discordapp.com/attachments/826217172782284860/872236072690659458/random.png",
+		"alignment": 0,
+		"desc": [
+			"Not an actual role, just used as a filler for setups where a random village-sided role is chosen"
+		]
+	},
+	{
+		"name": "RandomMafia",
+		"pack": "Classic",
+		"image": "https://cdn.discordapp.com/attachments/826217172782284860/872236075320483844/randommafia.png",
+		"alignment": 1,
+		"desc": [
+			"Not an actual role, just used as a filler for setups where a random mafia-sided role is chosen"
 		]
 	},
 	{
