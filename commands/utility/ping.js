@@ -7,6 +7,7 @@ module.exports = {
 	category: "utility",
 	execute(message, args, context) {
 		var desc = "**Message latency**: " + (Date.now() - message.createdTimestamp) + "ms\n"
+			.replace("-", "")
 		desc = desc + "**Websocket latency**: " + message.client.ws.ping + "ms\n"
 		message.reply("Pinging...").then(sent => {
 			desc = desc + "**Roundtrip latency**: " + (sent.createdTimestamp - message.createdTimestamp) + "ms"
