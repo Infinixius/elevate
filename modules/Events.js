@@ -19,7 +19,6 @@ module.exports.ready = function(client) {
 }
 module.exports.message = async function(message) {
 	global.stats.messages++
-	if (!message.author.id == 485443784180760578) return message.reply("you are not infix")
 	let context = {}
 	if (message.partial) {logger.log("Partial message: "+message, "debug")} // log partial messages
 	if (!message.content.startsWith(config.prefix) || message.author.bot) return
@@ -27,7 +26,7 @@ module.exports.message = async function(message) {
 	const commandName = args.shift().toLowerCase()
 	
 	// get command
-	if (!message.client.commands.has(commandName)) return
+	//if (!message.client.commands.has(commandName)) return
 	const command = message.client.commands.get(commandName)
 		|| message.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName))
 	if (!command) return
@@ -38,6 +37,9 @@ module.exports.message = async function(message) {
 	let cooldown = commands.cooldownCheck(message,command)
 	if (cooldown) {
 		return message.reply(`You can't use \`${commandName}\` for \`${cooldown}\` more seconds.`)
+			.then(sent => {
+				setTimeout(function(){sent.edit("~~"+sent.content+"~~")}, cooldown*1000)
+			})
 	}
 	
 	// check for permissions
@@ -51,16 +53,19 @@ module.exports.message = async function(message) {
 		if (target) {
 			context.target = target
 		} else {
-			return message.reply("You need to provide a target! Example: @"+message.author.username)
+			return message.reply(response(message, "reply", "negative", message.author, { title: "You need to provide a target! Example: @"+message.author.username }))
 		}
 	}
 
 	try {
 		global.stats.commands++
 		command.execute(message, args, context)
-	} catch (err) {
-		logger.log(`Command error while handling "${message.content}": ${err}`, "error")
-		message.reply("Failed to run command!")
+	} catch (error) {
+		logger.error(`Command error while handling "${message.content}": ${error}`)
+		message.reply(response(message, "error", "negative", message.author, { 
+			description: "Failed to run that command!",
+			error: error
+		}))
 	}
 	
 }
