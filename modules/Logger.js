@@ -1,8 +1,13 @@
 const fs = require("fs")
 const config = require("../config.json")
 
+if (!fs.existsSync("./logs")) {
+	fs.mkdirSync("./logs")
+}
+
 function timestamp() {
 	return new Date().toLocaleTimeString()
+		.replace(":","-") // you can't have : in windows filenames
 }
 function datestamp() {
 	return new Date().toLocaleDateString()
@@ -19,7 +24,7 @@ if (config.logger.enabled) {
 	file.write("Elevate log file from "+timestamp()+" - "+datestamp()+"\n")
 }
 
-module.exports.log = function(message, type) {
+module.exports.advlog = function(message, type) {
 	if (!config.logger.enabled) return
 	if (!config.logger[type]) return
 	let log = config.logger.format
@@ -32,6 +37,14 @@ module.exports.log = function(message, type) {
 	file.write(log+"\n")
 }
 
+module.exports.log = function(message) {
+	module.exports.advlog(message, "info")
+}
+
 module.exports.error = function(message) {
-	module.exports.log(message, "error")
+	module.exports.advlog(message, "error")
+}
+
+module.exports.warning = function(message) {
+	module.exports.advlog(message, "warning")
 }
