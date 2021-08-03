@@ -1,8 +1,10 @@
 const fetch = require("node-fetch")
 const jsdom = require("jsdom")
 const { JSDOM } = jsdom
+const config = require("../../config.json")
 const response = require("../../modules/Response.js")
 const logger = require("../../modules/Logger.js")
+const { validate } = require("../../modules/Utility.js")
 
 module.exports = {
 	name: "tf2-wiki",
@@ -15,16 +17,22 @@ module.exports = {
 	async execute(message, args, context) {
 		// fullArgs is defined here because regular args doesnt include the command itself
 		const fullArgs = message.content.trim().split(/ +/)
-		let search = message.content.slice(fullArgs[0].length)
-			.replace(/[^0-9a-z ]/gi, "") // only keep alphanumerics
-			.trim()
-			.replace(" ", "_") // replace spaces with underscores to keep it URL-safe
+		let search = validate(message.content.slice(fullArgs[0].length))
+		
+		if (search == "") { // if only non-alphanumeric characters were provided
+			return message.reply(response(message, "reply", "negative", message.author, { title: "That search wouldn't have resulted in anything.\n~~Hint: This usually happens when only non-alphanumeric characters are in the search query.~~" }))
+		}
 		
 		await message.react("👀")
-		fetch("https://wiki.teamfortress.com/wiki/"+search)
+		fetch("https://wiki.teamfortress.com/wiki/"+search, { headers: { "User-Agent": config.httpUserAgent } })
 			.then(res => res.text())
 			.then(text => {
 				const dom = new JSDOM(text)
+				
+				if (dom.window.document.querySelector("p").textContent.startsWith("There is currently no text in this page.")) {
+					return message.reply(response(message, "reply", "negative", message.author, { title: "No results were found." }))
+				}
+				
 				let embed = { color: "f08149", fields: [], author: { name: "Team Fortress 2 Official Wiki" } }
 				embed.footer = {
 					text: "Requested by "+message.author.username,
@@ -91,10 +99,10 @@ module.exports = {
 					embed.fields.push({ name: "Additional info", value: info.join("\n") })
 				}
 				
-				console.log(embed)
 				message.reply({embeds: [embed]})
 		})
 		.catch(error => {
+			logger.error("Fetch error: "+error)
 			message.reply(response(message, "error", "negative", message.author, { 
 				description: "Failed to make HTTP request!",
 				error: error
