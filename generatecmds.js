@@ -1,4 +1,4 @@
-// Quick script I wrote to automatically generate docs/Commands.js
+// Quick script I wrote to automatically generate docs/Commands.md
 
 const fs = require("fs")
 var wiki = "# Commands\n\nList of commands.\n\n"
@@ -11,10 +11,10 @@ for (const folder of commandFolders) {
 		const command = require(`./commands/${folder}/${file}`)
 		wiki = wiki + "### "+command.name+"\n"
 		wiki = wiki + command.description+"\n\n"
-		wiki = wiki + "Category: "+command.category+"\n"
-		if (command.aliases) wiki = wiki + "Aliases: "+command.aliases.join(", ")+"\n"
-		if (command.nsfw) wiki = wiki + "Only works in NSFW channels\n"
-		if (command.args) wiki = wiki + "Requires arguments. Usage: `"+command.usage+"`\n"
+		wiki = wiki + "Category: "+command.category+"\n\n"
+		if (command.aliases) wiki = wiki + "Aliases: "+command.aliases.join(", ")+"\n\n"
+		if (command.nsfw) wiki = wiki + "Only works in NSFW channels\n\n"
+		if (command.args) wiki = wiki + "Requires arguments. Usage: `"+command.usage+"`\n\n"
 		if (command.cooldown) {
 			wiki = wiki + "Cooldown: "+command.cooldown
 		} else {
