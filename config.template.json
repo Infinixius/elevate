@@ -1,0 +1,48 @@
+{
+	"token": "",
+	"http": true,
+	"dev": true,
+	"port": 80,
+
+	"magickPath": "magick",
+
+	"HTTPuserAgent": "Elevate/2.0.0 (infinixius)",
+	
+	"acr": {
+		"host": "",
+		"access_key": "",
+		"access_secret": ""
+	},
+
+	"applicationID": "",
+	"guilds": [""],
+
+	"permissions": {
+		"moderator": [""],
+		"admin": [""],
+		"root": [""]
+	},
+
+	"logger": {
+		"enabled": true,
+		"format": "[%time][%TYPE] - %message",
+		"fileFormat": "./logs/%date-%time.log",
+
+		"info": true,
+		"warning": true,
+		"error": true,
+		"debug": true
+	},
+
+	"status": {
+		"interval": 120000,
+		"prefix": "",
+		"suffix": " | /help",
+		"list": [
+			"Status A",
+			"Status B",
+			"Watching Status C",
+			"Listening to Status D"
+		]
+	}
+}

@@ -1,0 +1,44 @@
+{
+	"name": "elevate",
+	"version": "2.0.0",
+	"description": "A modular Discord bot written in Discord.js",
+	"main": "index.js",
+	"type": "module",
+	"dependencies": {
+		"@discordjs/opus": "^0.5.3",
+		"@discordjs/rest": "^0.1.0-canary.0",
+		"@discordjs/voice": "^0.7.5",
+		"acrcloud": "^1.4.0",
+		"bufferutil": "^4.0.5",
+		"discord-api-types": "^0.23.1",
+		"discord.js": "^13.2.0",
+		"erlpack": "github:discord/erlpack",
+		"image-size": "^1.0.0",
+		"node-fetch": "^3.0.0",
+		"sodium": "^3.0.2",
+		"ytdl-core": "^4.9.1",
+		"zlib-sync": "^0.1.7"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node --experimental-modules --experimental-json-modules src/index.js",
+		"resetCommands": "node --experimental-json-modules src/scripts/resetCommands.js",
+		"generateCommands": "node --experimental-json-modules src/scripts/generateCommands.js"
+	},
+	"engines": {
+		"node": "16.9.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/infinixius/elevate.git"
+	},
+	"keywords": [
+		"discord"
+	],
+	"author": "infinixius",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/infinixius/elevate/issues"
+	},
+	"homepage": "https://github.com/infinixius/elevate#readme"
+}
